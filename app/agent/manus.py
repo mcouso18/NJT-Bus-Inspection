@@ -163,3 +163,47 @@ class Manus(ToolCallAgent):
         self.next_step_prompt = original_prompt
 
         return result
+
+    async def run_vision_analysis(self, vision_prompt: Dict):
+        """Placeholder for vision analysis."""
+        logger.info(f"Received vision prompt: {vision_prompt}")
+        # This method will be implemented to call the vision API
+        from anthropic import Anthropic
+
+        try:
+            vision_config = config.llm.get("vision")
+            if not vision_config or not vision_config.api_key or not vision_config.model:
+                logger.error("Vision API configuration missing in config.toml")
+                return
+
+            client = Anthropic(api_key=vision_config.api_key)
+
+            image_data = vision_prompt["image"]
+            media_type = image_data["media_type"]
+            image_base64 = image_data["data"]
+
+            message = client.messages.create(
+                model=vision_config.model,
+                max_tokens=vision_config.max_tokens,
+                messages=[
+                    {
+                        "role": "user",
+                        "content": [
+                            {
+                                "type": "image",
+                                "source": {
+                                    "type": "base64",
+                                    "media_type": media_type,
+                                    "data": image_base64,
+                                },
+                            },
+                            {"type": "text", "text": vision_prompt["text"]},
+                        ],
+                    }
+                ],
+            )
+            logger.info(f"Vision analysis response: {message.content[0].text}")
+            self.memory.add_message({"role": "assistant", "content": message.content[0].text})
+
+        except Exception as e:
+            logger.error(f"Error during vision analysis: {str(e)}")

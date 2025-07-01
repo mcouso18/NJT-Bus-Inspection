@@ -1,0 +1,95 @@
+=== Text File Analysis Report ===
+
+File: example.txt
+  Word count: 17
+  Unique words: 16
+  Average word length: 4.59 characters
+  Most common words:
+    - 'by': 2 occurrences
+    - 'this': 1 occurrences
+    - 'is': 1 occurrences
+    - 'a': 1 occurrences
+    - 'sample': 1 occurrences
+    - 'file': 1 occurrences
+    - 'files': 1 occurrences
+    - 'generated': 1 occurrences
+    - 'openmanus': 1 occurrences
+    - 'are': 1 occurrences
+  Word length distribution:
+     1 chars: ########## (1)
+     2 chars: ######################################## (4)
+     3 chars: #################### (2)
+     4 chars: #################### (2)
+     5 chars: ########## (1)
+     6 chars: ############################## (3)
+     7 chars: #################### (2)
+     9 chars: #################### (2)
+
+File: README.md
+  Word count: 284
+  Unique words: 108
+  Average word length: 5.67 characters
+  Most common words:
+    - 'prompt': 17 occurrences
+    - 'the': 15 occurrences
+    - 'python': 11 occurrences
+    - 'window': 9 occurrences
+    - 'to': 9 occurrences
+    - 'py': 8 occurrences
+    - 'a': 6 occurrences
+    - 'in': 6 occurrences
+    - 'interactive': 5 occurrences
+    - 'for': 5 occurrences
+  Word length distribution:
+     1 chars: ############ (17)
+     2 chars: ###################### (31)
+     3 chars: ################################ (44)
+     4 chars: ########################## (36)
+     5 chars: ###################### (31)
+     6 chars: ######################################## (55)
+     7 chars: ############ (17)
+     8 chars: ######### (13)
+     9 chars: ###### (9)
+    10 chars: ### (5)
+    11 chars: ### (5)
+    12 chars: # (2)
+    13 chars: ### (5)
+    17 chars: ### (5)
+    18 chars: ## (3)
+    21 chars: ## (3)
+    23 chars: ## (3)
+
+File: text_analysis_report.txt
+  Word count: 100
+  Unique words: 51
+  Average word length: 5.18 characters
+  Most common words:
+    - 'occurrences': 20 occurrences
+    - '1': 9 occurrences
+    - 'file': 4 occurrences
+    - 'word': 4 occurrences
+    - 'words': 4 occurrences
+    - '5': 3 occurrences
+    - 'count': 2 occurrences
+    - '17': 2 occurrences
+    - 'unique': 2 occurrences
+    - 'average': 2 occurrences
+  Word length distribution:
+     1 chars: ######################################## (21)
+     2 chars: ######################## (13)
+     3 chars: ########### (6)
+     4 chars: ###################### (12)
+     5 chars: ############# (7)
+     6 chars: ###################### (12)
+     7 chars: ##### (3)
+     8 chars: # (1)
+     9 chars: ### (2)
+    10 chars: ### (2)
+    11 chars: ######################################## (21)
+
+=== File Comparison ===
+
+Word counts:
+  example.txt: 17 total, 16 unique
+  README.md: 284 total, 108 unique
+  text_analysis_report.txt: 100 total, 51 unique

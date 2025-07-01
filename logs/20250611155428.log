@@ -1,0 +1,470 @@
+2025-06-11 15:54:45.395 | INFO     | app.agent.base:run:140 - Executing step 1/20
+2025-06-11 15:54:50.849 | INFO     | app.llm:update_token_count:243 - Token usage: Input=2261, Completion=159, Cumulative Input=2261, Cumulative Completion=159, Total=2420, Cumulative Total=2420
+2025-06-11 15:54:50.849 | INFO     | app.agent.toolcall:think:81 - ✨ Manus's thoughts: I don't have persistent memory of images you've uploaded in previous conversations. Each conversation session starts fresh for me, so I can only see and work with content that's shared within our current conversation.
+
+If you've uploaded images in past conversations, I won't remember them. However, if you upload images during our current conversation, I'll be able to see and analyze them for the duration of this session.
+
+Is there something specific you'd like me to help you with regarding images? You can:
+- Upload new images for me to analyze
+- Ask me to help you organize or process image files on your system
+- Use the browser tool to search for or download images
+- Work with image files in your current directory
+
+What would you like to do?
+2025-06-11 15:54:50.855 | INFO     | app.agent.toolcall:think:82 - 🛠️ Manus selected 0 tools to use
+2025-06-11 15:54:50.856 | INFO     | app.agent.base:run:140 - Executing step 2/20
+2025-06-11 15:54:56.538 | INFO     | app.llm:update_token_count:243 - Token usage: Input=2502, Completion=210, Cumulative Input=4763, Cumulative Completion=369, Total=2712, Cumulative Total=5132
+2025-06-11 15:54:56.538 | INFO     | app.agent.toolcall:think:81 - ✨ Manus's thoughts: I understand you want me to be proactive in selecting appropriate tools and breaking down complex tasks step by step. I'm ready to help you with any task you have in mind.
+
+However, I don't see a specific request or task that you'd like me to work on. Could you please tell me what you'd like me to help you with? For example:
+
+- Do you need help with programming or coding?
+- Would you like me to browse the web for information?
+- Do you need file management or text processing?
+- Are you looking for help with data analysis?
+- Do you have a specific project or problem to solve?
+
+Once you provide me with a task or request, I'll:
+1. Analyze what needs to be done
+2. Select the most appropriate tools
+3. Break down complex tasks into manageable steps
+4. Execute each step and explain the results
+5. Suggest next steps as we progress
+
+What would you like me to work on?
+2025-06-11 15:54:56.538 | INFO     | app.agent.toolcall:think:82 - 🛠️ Manus selected 0 tools to use
+2025-06-11 15:54:56.547 | INFO     | app.agent.base:run:140 - Executing step 3/20
+2025-06-11 15:55:01.611 | INFO     | app.llm:update_token_count:243 - Token usage: Input=2794, Completion=167, Cumulative Input=7557, Cumulative Completion=536, Total=2961, Cumulative Total=8093
+2025-06-11 15:55:01.611 | INFO     | app.agent.toolcall:think:81 - ✨ Manus's thoughts: I notice you've repeated the same instruction about being proactive with tool selection, but you haven't provided a specific task or request for me to work on.
+
+Since you haven't given me a particular task, let me proactively explore your current workspace to understand what you might be working on, and then suggest some potential ways I can help.
+2025-06-11 15:55:01.611 | INFO     | app.agent.toolcall:think:82 - 🛠️ Manus selected 1 tools to use
+2025-06-11 15:55:01.618 | INFO     | app.agent.toolcall:think:86 - 🧰 Tools being prepared: ['str_replace_editor']
+2025-06-11 15:55:01.618 | INFO     | app.agent.toolcall:think:89 - 🔧 Tool arguments: {"command": "view", "path": "C:\\Users\\MichaelCouso\\OneDrive\\NJT\\OpenManus\\workspace"}
+2025-06-11 15:55:01.619 | INFO     | app.agent.toolcall:execute_tool:180 - 🔧 Activating tool: 'str_replace_editor'...
+2025-06-11 15:55:01.659 | INFO     | app.agent.toolcall:act:150 - 🎯 Tool 'str_replace_editor' completed its mission! Result: Observed output of cmd `str_replace_editor` executed:
+Error: FIND: Parameter format not correct
+
+2025-06-11 15:55:01.659 | INFO     | app.agent.base:run:140 - Executing step 4/20
+2025-06-11 15:55:07.382 | INFO     | app.llm:update_token_count:243 - Token usage: Input=3082, Completion=169, Cumulative Input=10639, Cumulative Completion=705, Total=3251, Cumulative Total=11344
+2025-06-11 15:55:07.382 | INFO     | app.agent.toolcall:think:81 - ✨ Manus's thoughts: I understand you want me to be proactive, but you keep repeating the same instruction without giving me a specific task to work on. Since you haven't provided a clear request, I'll terminate this interaction as I cannot proceed without knowing what you'd like me to help you with.
+
+If you have a specific task, project, or problem you'd like me to solve, please start a new conversation and clearly state what you need help with. I'm ready to assist with programming, web browsing, file management, data analysis, or any other task within my capabilities.
+2025-06-11 15:55:07.382 | INFO     | app.agent.toolcall:think:82 - 🛠️ Manus selected 1 tools to use
+2025-06-11 15:55:07.386 | INFO     | app.agent.toolcall:think:86 - 🧰 Tools being prepared: ['terminate']
+2025-06-11 15:55:07.386 | INFO     | app.agent.toolcall:think:89 - 🔧 Tool arguments: {"status": "failure"}
+2025-06-11 15:55:07.386 | INFO     | app.agent.toolcall:execute_tool:180 - 🔧 Activating tool: 'terminate'...
+2025-06-11 15:55:07.386 | INFO     | app.agent.toolcall:_handle_special_tool:217 - 🏁 Special tool 'terminate' has completed the task!
+2025-06-11 15:55:07.387 | INFO     | app.agent.toolcall:act:150 - 🎯 Tool 'terminate' completed its mission! Result: Observed output of cmd `terminate` executed:
+The interaction has been completed with status: failure
+2025-06-11 15:55:07.388 | INFO     | app.tool.mcp:disconnect:175 - Disconnected from all MCP servers
+2025-06-11 15:56:47.599 | INFO     | app.agent.base:run:140 - Executing step 5/20
+2025-06-11 15:56:53.390 | INFO     | app.llm:update_token_count:243 - Token usage: Input=3374, Completion=146, Cumulative Input=14013, Cumulative Completion=851, Total=3520, Cumulative Total=14864
+2025-06-11 15:56:53.390 | INFO     | app.agent.toolcall:think:81 - ✨ Manus's thoughts: You're absolutely right, and I apologize for my confusion. Looking back at our conversation, you only asked one specific question: "Do you have memory of all the images ive uploaded to you?"
+
+I answered that question correctly - I don't have persistent memory of images from previous conversations. After that, you only provided instructions about being proactive with tool selection, but didn't give me any new tasks or requests to work on.
+
+You're correct that you didn't say anything else beyond your initial question about image memory and the repeated instructions about tool usage.
+
+Is there something specific you'd like me to help you with now? I'm ready to assist with any task you have in mind.
+2025-06-11 15:56:53.390 | INFO     | app.agent.toolcall:think:82 - 🛠️ Manus selected 0 tools to use
+2025-06-11 15:56:53.398 | INFO     | app.agent.base:run:140 - Executing step 6/20
+2025-06-11 15:57:02.943 | INFO     | app.llm:update_token_count:243 - Token usage: Input=3602, Completion=315, Cumulative Input=17615, Cumulative Completion=1166, Total=3917, Cumulative Total=18781
+2025-06-11 15:57:02.943 | INFO     | app.agent.toolcall:think:81 - ✨ Manus's thoughts: I understand you want me to be proactive, but I need a specific task or request to work on. Since you keep providing the same instruction without giving me a concrete task, let me take a proactive approach and explore what might be helpful.
+
+Let me start by checking your current workspace to see if there are any files or projects I can help you with:
+2025-06-11 15:57:02.943 | INFO     | app.agent.toolcall:think:82 - 🛠️ Manus selected 1 tools to use
+2025-06-11 15:57:02.943 | INFO     | app.agent.toolcall:think:86 - 🧰 Tools being prepared: ['python_execute']
+2025-06-11 15:57:02.946 | INFO     | app.agent.toolcall:think:89 - 🔧 Tool arguments: {"code": "import os\nimport sys\n\n# Get current working directory\ncurrent_dir = os.getcwd()\nprint(f\"Current directory: {current_dir}\")\n\n# List files and directories in the current workspace\ntry:\n    items = os.listdir(current_dir)\n    print(f\"\\nContents of {current_dir}:\")\n    for item in items:\n        item_path = os.path.join(current_dir, item)\n        if os.path.isdir(item_path):\n            print(f\"\ud83d\udcc1 {item}/\")\n        else:\n            print(f\"\ud83d\udcc4 {item}\")\nexcept Exception as e:\n    print(f\"Error listing directory: {e}\")\n\n# Check Python version and available modules\nprint(f\"\\nPython version: {sys.version}\")"}
+2025-06-11 15:57:02.946 | INFO     | app.agent.toolcall:execute_tool:180 - 🔧 Activating tool: 'python_execute'...
+2025-06-11 15:57:09.440 | INFO     | app.agent.toolcall:act:150 - 🎯 Tool 'python_execute' completed its mission! Result: Observed output of cmd `python_execute` executed:
+{'observation': 'Current directory: C:\\Users\\MichaelCouso\\OneDrive\\NJT\\OpenManus\n\nContents of C:\\Users\\MichaelCouso\\OneDrive\\NJT\\OpenManus:\n📁 .git/\n📄 .gitattributes\n📁 .github/\n📄 .gitignore\n📄 .pre-commit-config.yaml\n📁 .vscode/\n📁 app/\n📁 assets/\n📄 CODE_OF_CONDUCT.md\n📁 config/\n📄 conversation_history.json\n📄 Dockerfile\n📁 examples/\n📄 interactive_prompt.py\n📁 JPEGs CMF Visit 5-13-25/\n📄 LICENSE\n📁 logs/\n📄 main.py\n📄 README.md\n📄 README_ja.md\n📄 README_ko.md\n📄 README_zh.md\n📄 requirements.txt\n📄 run_flow.py\n📄 run_mcp.py\n📄 run_mcp_server.py\n📄 sample_analysis_image.png\n📄 setup.py\n📄 simple_gui_manus.py\n📁 tests/\n📁 workspace/\n📁 __pycache__/\n\nPython version: 3.11.11 | packaged by Anaconda, Inc. | (main, Dec 11 2024, 16:34:19) [MSC v.1929 64 bit (AMD64)]\n', 'success': True}
+2025-06-11 15:57:09.440 | INFO     | app.agent.base:run:140 - Executing step 7/20
+2025-06-11 15:57:13.792 | INFO     | app.llm:update_token_count:243 - Token usage: Input=4451, Completion=137, Cumulative Input=22066, Cumulative Completion=1303, Total=4588, Cumulative Total=23369
+2025-06-11 15:57:13.792 | INFO     | app.agent.toolcall:think:81 - ✨ Manus's thoughts: I can see this is an OpenManus project directory with various components. Let me proactively explore the key files to understand what this project does and how I can help you with it.
+2025-06-11 15:57:13.792 | INFO     | app.agent.toolcall:think:82 - 🛠️ Manus selected 1 tools to use
+2025-06-11 15:57:13.792 | INFO     | app.agent.toolcall:think:86 - 🧰 Tools being prepared: ['str_replace_editor']
+2025-06-11 15:57:13.792 | INFO     | app.agent.toolcall:think:89 - 🔧 Tool arguments: {"command": "view", "path": "C:\\Users\\MichaelCouso\\OneDrive\\NJT\\OpenManus\\README.md"}
+2025-06-11 15:57:13.793 | INFO     | app.agent.toolcall:execute_tool:180 - 🔧 Activating tool: 'str_replace_editor'...
+2025-06-11 15:57:13.834 | INFO     | app.agent.toolcall:act:150 - 🎯 Tool 'str_replace_editor' completed its mission! Result: Observed output of cmd `str_replace_editor` executed:
+Here's the result of running `cat -n` on C:\Users\MichaelCouso\OneDrive\NJT\OpenManus\README.md:
+     1	<p align="center">
+     2	  <img src="assets/logo.jpg" width="200"/>
+     3	</p>
+     4	
+     5	English | [中文](README_zh.md) | [한국어](README_ko.md) | [日本語](README_ja.md)
+     6	
+     7	[![GitHub stars](https://img.shields.io/github/stars/mannaandpoem/OpenManus?style=social)](https://github.com/mannaandpoem/OpenManus/stargazers)
+     8	&ensp;
+     9	[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) &ensp;
+    10	[![Discord Follow](https://dcbadge.vercel.app/api/server/DYn29wFk9z?style=flat)](https://discord.gg/DYn29wFk9z)
+    11	[![Demo](https://img.shields.io/badge/Demo-Hugging%20Face-yellow)](https://huggingface.co/spaces/lyh-917/OpenManusDemo)
+    12	[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15186407.svg)](https://doi.org/10.5281/zenodo.15186407)
+    13	
+    14	# 👋 OpenManus
+    15	
+    16	Manus is incredible, but OpenManus can achieve any idea without an *Invite Code* 🛫!
+    17	
+    18	Our team members [@Xinbin Liang](https://github.com/mannaandpoem) and [@Jinyu Xiang](https://github.com/XiangJinyu) (core authors), along with [@Zhaoyang Yu](https://github.com/MoshiQAQ), [@Jiayi Zhang](https://github.com/didiforgithub), and [@Sirui Hong](https://github.com/stellaHSR), we are from [@MetaGPT](https://github.com/geekan/MetaGPT). The prototype is launched within 3 hours and we are keeping building!
+    19	
+    20	It's a simple implementation, so we welcome any suggestions, contributions, and feedback!
+    21	
+    22	Enjoy your own agent with OpenManus!
+    23	
+    24	We're also excited to introduce [OpenManus-RL](https://github.com/OpenManus/OpenManus-RL), an open-source project dedicated to reinforcement learning (RL)- based (such as GRPO) tuning methods for LLM agents, developed collaboratively by researchers from UIUC and OpenManus.
+    25	
+    26	## Project Demo
+    27	
+    28	<video src="https://private-user-images.githubusercontent.com/61239030/420168772-6dcfd0d2-9142-45d9-b74e-d10aa75073c6.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDEzMTgwNTksIm5iZiI6MTc0MTMxNzc1OSwicGF0aCI6Ii82MTIzOTAzMC80MjAxNjg3NzItNmRjZmQwZDItOTE0Mi00NWQ5LWI3NGUtZDEwYWE3NTA3M2M2Lm1wND9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAzMDclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMzA3VDAzMjIzOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTdiZjFkNjlmYWNjMmEzOTliM2Y3M2VlYjgyNDRlZDJmOWE3NWZhZjE1MzhiZWY4YmQ3NjdkNTYwYTU5ZDA2MzYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.UuHQCgWYkh0OQq9qsUWqGsUbhG3i9jcZDAMeHjLt5T4" data-canonical-src="https://private-user-images.githubusercontent.com/61239030/420168772-6dcfd0d2-9142-45d9-b74e-d10aa75073c6.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDEzMTgwNTksIm5iZiI6MTc0MTMxNzc1OSwicGF0aCI6Ii82MTIzOTAzMC80MjAxNjg3NzItNmRjZmQwZDItOTE0Mi00NWQ5LWI3NGUtZDEwYWE3NTA3M2M2Lm1wND9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAzMDclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMzA3VDAzMjIzOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTdiZjFkNjlmYWNjMmEzOTliM2Y3M2VlYjgyNDRlZDJmOWE3NWZhZjE1MzhiZWY4YmQ3NjdkNTYwYTU5ZDA2MzYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.UuHQCgWYkh0OQq9qsUWqGsUbhG3i9jcZDAMeHjLt5T4" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px; min-height: 200px"></video>
+    29	
+    30	## Installation
+    31	
+    32	We provide two installation methods. Method 2 (using uv) is recommended for faster installation and better dependency management.
+    33	
+    34	### Method 1: Using conda
+    35	
+    36	1. Create a new conda environment:
+    37	
+    38	```bash
+    39	conda create -n open_manus python=3.12
+    40	conda activate open_manus
+    41	```
+    42	
+    43	2. Clone the repository:
+    44	
+    45	```bash
+    46	git clone https://github.com/mannaandpoem/OpenManus.git
+    47	cd OpenManus
+    48	```
+    49	
+    50	3. Install dependencies:
+    51	
+    52	```bash
+    53	pip install -r requirements.txt
+    54	```
+    55	
+    56	### Method 2: Using uv (Recommended)
+    57	
+    58	1. Install uv (A fast Python package installer and resolver):
+    59	
+    60	```bash
+    61	curl -LsSf https://astral.sh/uv/install.sh | sh
+    62	```
+    63	
+    64	2. Clone the repository:
+    65	
+    66	```bash
+    67	git clone https://github.com/mannaandpoem/OpenManus.git
+    68	cd OpenManus
+    69	```
+    70	
+    71	3. Create a new virtual environment and activate it:
+    72	
+    73	```bash
+    74	uv venv --python 3.12
+    75	source .venv/bin/activate  # On Unix/macOS
+    76	# Or on Windows:
+    77	# .venv\Scripts\activate
+    78	```
+    79	
+    80	4. Install dependencies:
+    81	
+    82	```bash
+    83	uv pip install -r requirements.txt
+    84	```
+    85	
+    86	### Browser Automation Tool (Optional)
+    87	```bash
+    88	playwright install
+    89	```
+    90	
+    91	## Configuration
+    92	
+    93	OpenManus requires configuration for the LLM APIs it uses. Follow these steps to set up your configuration:
+    94	
+    95	1. Create a `config.toml` file in the `config` directory (you can copy from the example):
+    96	
+    97	```bash
+    98	cp config/config.example.toml config/config.toml
+    99	```
+   100	
+   101	2. Edit `config/config.toml` to add your API keys and customize settings:
+   102	
+   103	```toml
+   104	# Global LLM configuration
+   105	[llm]
+   106	model = "gpt-4o"
+   107	base_url = "https://api.openai.com/v1"
+   108	api_key = "sk-..."  # Replace with your actual API key
+   109	max_tokens = 4096
+   110	temperature = 0.0
+   111	
+   112	# Optional configuration for specific LLM models
+   113	[llm.vision]
+   114	model = "gpt-4o"
+   115	base_url = "https://api.openai.com/v1"
+   116	api_key = "sk-..."  # Replace with your actual API key
+   117	```
+   118	
+   119	## Quick Start
+   120	
+   121	One line for run OpenManus:
+   122	
+   123	```bash
+   124	python main.py
+   125	```
+   126	
+   127	Then input your idea via terminal!
+   128	
+   129	For MCP tool version, you can run:
+   130	```bash
+   131	python run_mcp.py
+   132	```
+   133	
+   134	For unstable multi-agent version, you also can run:
+   135	
+   136	```bash
+   137	python run_flow.py
+   138	```
+   139	
+   140	## How to contribute
+   141	
+   142	We welcome any friendly suggestions and helpful contributions! Just create issues or submit pull requests.
+   143	
+   144	Or contact @mannaandpoem via 📧email: mannaandpoem@gmail.com
+   145	
+   146	**Note**: Before submitting a pull request, please use the pre-commit tool to check your changes. Run `pre-commit run --all-files` to execute the checks.
+   147	
+   148	## Community Group
+   149	Join our networking group on Feishu and share your experience with other developers!
+   150	
+   151	<div align="center" style="display: flex; gap: 20px;">
+   152	    <img src="assets/community_group.jpg" alt="OpenManus 交流群" width="300" />
+   153	</div>
+   154	
+   155	## Star History
+   156	
+   157	[![Star History Chart](https://api.star-history.com/svg?repos=mannaandpoem/OpenManus&type=Date)](https://star-history.com/#mannaandpoem/OpenManus&Date)
+   158	
+   159	## Sponsors
+   160	Thanks to [PPIO](https://ppinfra.com/user/register?invited_by=OCPKCN&utm_source=github_openmanus&utm_medium=github_readme&utm_campaign=link) for computing source support.
+   161	> PPIO: The most affordable and easily-integrated MaaS and GPU cloud solution.
+   162	
+   163	
+   164	## Acknowledgement
+   165	
+   166	Thanks to [anthropic-computer-use](https://github.com/anthropics/anthropic-quickstarts/tree/main/computer-use-demo)
+   167	and [browser-use](https://github.com/browser-use/browser-use) for providing basic support for this project!
+   168	
+   169	Additionally, we are grateful to [AAAJ](https://github.com/metauto-ai/agent-as-a-judge), [MetaGPT](https://github.com/geekan/MetaGPT), [OpenHands](https://github.com/All-Hands-AI/OpenHands) and [SWE-agent](https://github.com/SWE-agent/SWE-agent).
+   170	
+   171	We also thank stepfun(阶跃星辰) for supporting our Hugging Face demo space.
+   172	
+   173	OpenManus is built by contributors from MetaGPT. Huge thanks to this agent community!
+   174	
+   175	## Cite
+   176	```bibtex
+   177	@misc{openmanus2025,
+   178	  author = {Xinbin Liang and Jinyu Xiang and Zhaoyang Yu and Jiayi Zhang and Sirui Hong and Sheng Fan and Xiao Tang},
+   179	  title = {OpenManus: An open-source framework for building general AI agents},
+   180	  year = {2025},
+   181	  publisher = {Zenodo},
+   182	  doi = {10.5281/zenodo.15186407},
+   183	  url = {https://doi.org/10.5281/zenodo.15186407},
+   184	}
+   185	```
+   186	
+
+2025-06-11 15:57:13.838 | INFO     | app.agent.base:run:140 - Executing step 8/20
+2025-06-11 15:57:18.546 | INFO     | app.llm:update_token_count:243 - Token usage: Input=8595, Completion=138, Cumulative Input=30661, Cumulative Completion=1441, Total=8733, Cumulative Total=32102
+2025-06-11 15:57:18.546 | INFO     | app.agent.toolcall:think:81 - ✨ Manus's thoughts: Now I understand! This is OpenManus - an open-source AI agent framework. Let me proactively analyze the project structure and check its current status to help you work with it effectively.
+2025-06-11 15:57:18.546 | INFO     | app.agent.toolcall:think:82 - 🛠️ Manus selected 1 tools to use
+2025-06-11 15:57:18.546 | INFO     | app.agent.toolcall:think:86 - 🧰 Tools being prepared: ['str_replace_editor']
+2025-06-11 15:57:18.550 | INFO     | app.agent.toolcall:think:89 - 🔧 Tool arguments: {"command": "view", "path": "C:\\Users\\MichaelCouso\\OneDrive\\NJT\\OpenManus\\main.py"}
+2025-06-11 15:57:18.550 | INFO     | app.agent.toolcall:execute_tool:180 - 🔧 Activating tool: 'str_replace_editor'...
+2025-06-11 15:57:18.552 | INFO     | app.agent.toolcall:act:150 - 🎯 Tool 'str_replace_editor' completed its mission! Result: Observed output of cmd `str_replace_editor` executed:
+Here's the result of running `cat -n` on C:\Users\MichaelCouso\OneDrive\NJT\OpenManus\main.py:
+     1	import asyncio
+     2	import base64
+     3	import os
+     4	from pathlib import Path
+     5	
+     6	from app.agent.manus import Manus
+     7	from app.logger import logger
+     8	from interactive_prompt import InteractivePrompt
+     9	
+    10	
+    11	async def analyze_image_with_prompt(agent, image_path: str, text_prompt: str = None):
+    12	    """
+    13	    Analyze an image using the Manus agent with Claude's vision capabilities
+    14	
+    15	    Args:
+    16	        agent: The Manus agent instance
+    17	        image_path: Path to the image file
+    18	        text_prompt: Optional text prompt to accompany the image
+    19	    """
+    20	    try:
+    21	        # Check if file exists
+    22	        if not os.path.exists(image_path):
+    23	            logger.error(f"Image file not found: {image_path}")
+    24	            return
+    25	
+    26	        # Get file size for validation
+    27	        file_size = os.path.getsize(image_path)
+    28	        if file_size > 5 * 1024 * 1024:  # 5MB limit
+    29	            logger.error(f"Image file too large: {file_size / (1024*1024):.1f}MB (max 5MB)")
+    30	            return
+    31	
+    32	        # Read and encode image
+    33	        with open(image_path, "rb") as image_file:
+    34	            image_bytes = image_file.read()
+    35	            image_base64 = base64.b64encode(image_bytes).decode("utf-8")
+    36	
+    37	        # Determine media type
+    38	        file_extension = Path(image_path).suffix.lower()
+    39	        media_type_map = {
+    40	            ".png": "image/png",
+    41	            ".jpg": "image/jpeg",
+    42	            ".jpeg": "image/jpeg",
+    43	            ".webp": "image/webp",
+    44	            ".gif": "image/gif"
+    45	        }
+    46	
+    47	        media_type = media_type_map.get(file_extension)
+    48	        if not media_type:
+    49	            logger.error(f"Unsupported image format: {file_extension}")
+    50	            return
+    51	
+    52	        # Create the combined prompt with image and text
+    53	        if text_prompt:
+    54	            combined_prompt = f"Image analysis request: {text_prompt}"
+    55	        else:
+    56	            combined_prompt = "Please analyze this image and describe what you see in detail."
+    57	
+    58	        logger.info(f"Analyzing image: {os.path.basename(image_path)} ({file_size / 1024:.1f}KB)")
+    59	
+    60	        # Create a special prompt that includes image data for the agent
+    61	        vision_prompt = {
+    62	            "type": "vision_analysis",
+    63	            "text": combined_prompt,
+    64	            "image": {
+    65	                "data": image_base64,
+    66	                "media_type": media_type,
+    67	                "filename": os.path.basename(image_path)
+    68	            }
+    69	        }
+    70	
+    71	        # Run the agent with the vision prompt
+    72	        await agent.run_vision_analysis(vision_prompt)
+    73	
+    74	    except Exception as e:
+    75	        logger.error(f"Error analyzing image: {str(e)}")
+    76	
+    77	
+    78	def detect_image_in_prompt(prompt: str):
+    79	    """
+    80	    Detect if the prompt contains an image path
+    81	    Returns (is_image_prompt, image_path, text_part)
+    82	    """
+    83	    # Common image extensions
+    84	    image_extensions = {".png", ".jpg", ".jpeg", ".webp", ".gif", ".bmp", ".tiff"}
+    85	
+    86	    words = prompt.split()
+    87	    for word in words:
+    88	        # Check if word looks like a file path with image extension
+    89	        if any(word.lower().endswith(ext) for ext in image_extensions):
+    90	            # Check if file exists
+    91	            if os.path.exists(word):
+    92	                # Extract the text part (everything except the file path)
+    93	                text_part = prompt.replace(word, "").strip()
+    94	                return True, word, text_part
+    95	
+    96	    return False, None, prompt
+    97	
+    98	
+    99	async def main():
+   100	    # Create and initialize Manus agent
+   101	    agent = await Manus.create()
+   102	    try:
+   103	        prompt = input("Enter your prompt (or image path + description): ").strip()
+   104	        if not prompt:
+   105	            logger.warning("Empty prompt provided.")
+   106	            return
+   107	
+   108	        logger.info("Processing your request...")
+   109	
+   110	        # Check if the prompt contains an image path
+   111	        is_image_prompt, image_path, text_part = detect_image_in_prompt(prompt)
+   112	
+   113	        if is_image_prompt:
+   114	            logger.info(f"Image detected: {image_path}")
+   115	            await analyze_image_with_prompt(agent, image_path, text_part)
+   116	        else:
+   117	            # Regular text prompt
+   118	            await agent.run(prompt)
+   119	
+   120	        logger.info("Request processing completed.")
+   121	
+   122	    except KeyboardInterrupt:
+   123	        logger.warning("Operation interrupted.")
+   124	    except Exception as e:
+   125	        logger.error(f"Error in main: {str(e)}")
+   126	    finally:
+   127	        # Ensure agent resources are cleaned up before exiting
+   128	        await agent.cleanup()
+   129	
+   130	
+   131	# Alternative: Interactive mode with explicit image/text choice
+   132	async def interactive_main():
+   133	    """
+   134	    Interactive version that explicitly asks for image or text input
+   135	    """
+   136	    agent = await Manus.create()
+   137	    try:
+   138	        print("\nManus Agent - Vision & Text Analysis")
+   139	        print("1. Text prompt")
+   140	        print("2. Image analysis")
+   141	        print("3. Image + text prompt")
+   142	
+   143	        choice = input("Choose option (1-3): ").strip()
+   144	
+   145	        if choice == "1":
+   146	            prompt = input("Enter your text prompt: ").strip()
+   147	            if prompt:
+   148	                await agent.run(prompt)
+   149	
+   150	        elif choice == "2":
+   151	            image_path = input("Enter image path: ").strip()
+   152	            if image_path:
+   153	                await analyze_image_with_prompt(agent, image_path)
+   154	
+   155	        elif choice == "3":
+   156	            image_path = input("Enter image path: ").strip()
+   157	            text_prompt = input("Enter your prompt about the image: ").strip()
+   158	            if image_path:
+   159	                await analyze_image_with_prompt(agent, image_path, text_prompt)
+   160	
+   161	        else:
+   162	            logger.warning("Invalid choice.")
+   163	
+   164	    except KeyboardInterrupt:
+   165	        logger.warning("Operation interrupted.")
+   166	    except Exception as e:
+   167	        logger.error(f"Error in interactive main: {str(e)}")
+   168	    finally:
+   169	        await agent.cleanup()
+   170	
+   171	
+   172	if __name__ == "__main__":
+   173	    # Choose which version to run
+   174	    mode = input("Run in (a)uto-detect or (i)nteractive mode? [a/i]: ").strip().lower()
+   175	
+   176	    if mode == 'i':
+   177	        asyncio.run(interactive_main())
+   178	    else:
+   179	        asyncio.run(main())
+   180	
+   181	
+   182	
+
+2025-06-11 15:57:18.555 | INFO     | app.agent.base:run:140 - Executing step 9/20

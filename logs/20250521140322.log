@@ -1,0 +1,69 @@
+2025-05-21 14:05:03.936 | WARNING  | __main__:main:16 - Processing your request...
+2025-05-21 14:05:03.937 | INFO     | app.agent.base:run:140 - Executing step 1/20
+2025-05-21 14:05:21.334 | INFO     | app.llm:update_token_count:243 - Token usage: Input=2301, Completion=145, Cumulative Input=2301, Cumulative Completion=145, Total=2446, Cumulative Total=2446
+2025-05-21 14:05:21.335 | INFO     | app.agent.toolcall:think:81 - ✨ Manus's thoughts: I'll help you understand what's happening with the command you've provided. It appears you're trying to run a Python script called `main.py` using a specific Python environment. Let me examine the script and provide more information.
+2025-05-21 14:05:21.340 | INFO     | app.agent.toolcall:think:82 - 🛠️ Manus selected 1 tools to use
+2025-05-21 14:05:21.340 | INFO     | app.agent.toolcall:think:86 - 🧰 Tools being prepared: ['str_replace_editor']
+2025-05-21 14:05:21.341 | INFO     | app.agent.toolcall:think:89 - 🔧 Tool arguments: {"command": "view", "path": "C:/Users/MichaelCouso/OneDrive/NJT/OpenManus/main.py"}
+2025-05-21 14:05:21.342 | INFO     | app.agent.toolcall:execute_tool:180 - 🔧 Activating tool: 'str_replace_editor'...
+2025-05-21 14:05:21.342 | INFO     | app.agent.toolcall:act:150 - 🎯 Tool 'str_replace_editor' completed its mission! Result: Observed output of cmd `str_replace_editor` executed:
+Here's the result of running `cat -n` on C:/Users/MichaelCouso/OneDrive/NJT/OpenManus/main.py:
+     1	import asyncio
+     2	
+     3	from app.agent.manus import Manus
+     4	from app.logger import logger
+     5	
+     6	
+     7	async def main():
+     8	    # Create and initialize Manus agent
+     9	    agent = await Manus.create()
+    10	    try:
+    11	        prompt = input("Enter your prompt: ")
+    12	        if not prompt.strip():
+    13	            logger.warning("Empty prompt provided.")
+    14	            return
+    15	
+    16	        logger.warning("Processing your request...")
+    17	        await agent.run(prompt)
+    18	        logger.info("Request processing completed.")
+    19	    except KeyboardInterrupt:
+    20	        logger.warning("Operation interrupted.")
+    21	    finally:
+    22	        # Ensure agent resources are cleaned up before exiting
+    23	        await agent.cleanup()
+    24	
+    25	
+    26	if __name__ == "__main__":
+    27	    asyncio.run(main())
+    28	
+
+2025-05-21 14:05:21.344 | INFO     | app.agent.base:run:140 - Executing step 2/20
+2025-05-21 14:05:25.200 | INFO     | app.llm:update_token_count:243 - Token usage: Input=2862, Completion=132, Cumulative Input=5163, Cumulative Completion=277, Total=2994, Cumulative Total=5440
+2025-05-21 14:05:25.200 | INFO     | app.agent.toolcall:think:81 - ✨ Manus's thoughts: I see that you're trying to run the `main.py` script from the OpenManus project. Let me analyze the script and the project structure to better understand how it works.
+2025-05-21 14:05:25.200 | INFO     | app.agent.toolcall:think:82 - 🛠️ Manus selected 1 tools to use
+2025-05-21 14:05:25.202 | INFO     | app.agent.toolcall:think:86 - 🧰 Tools being prepared: ['str_replace_editor']
+2025-05-21 14:05:25.202 | INFO     | app.agent.toolcall:think:89 - 🔧 Tool arguments: {"command": "view", "path": "C:/Users/MichaelCouso/OneDrive/NJT/OpenManus"}
+2025-05-21 14:05:25.202 | INFO     | app.agent.toolcall:execute_tool:180 - 🔧 Activating tool: 'str_replace_editor'...
+2025-05-21 14:05:25.231 | INFO     | app.agent.toolcall:act:150 - 🎯 Tool 'str_replace_editor' completed its mission! Result: Observed output of cmd `str_replace_editor` executed:
+Error: FIND: Parameter format not correct
+
+2025-05-21 14:05:25.231 | INFO     | app.agent.base:run:140 - Executing step 3/20
+2025-05-21 14:05:54.581 | INFO     | app.llm:update_token_count:243 - Token usage: Input=3115, Completion=150, Cumulative Input=8278, Cumulative Completion=427, Total=3265, Cumulative Total=8705
+2025-05-21 14:05:54.581 | INFO     | app.agent.toolcall:think:81 - ✨ Manus's thoughts: I understand you're trying to run the OpenManus project. Let me explore the project structure to better understand how it works and help you run it properly.
+2025-05-21 14:05:54.585 | INFO     | app.agent.toolcall:think:82 - 🛠️ Manus selected 1 tools to use
+2025-05-21 14:05:54.586 | INFO     | app.agent.toolcall:think:86 - 🧰 Tools being prepared: ['str_replace_editor']
+2025-05-21 14:05:54.587 | INFO     | app.agent.toolcall:think:89 - 🔧 Tool arguments: {"command": "view", "path": "C:/Users/MichaelCouso/OneDrive/NJT/OpenManus", "view_range": [1, 20]}
+2025-05-21 14:05:54.589 | INFO     | app.agent.toolcall:execute_tool:180 - 🔧 Activating tool: 'str_replace_editor'...
+2025-05-21 14:05:54.591 | INFO     | app.agent.toolcall:act:150 - 🎯 Tool 'str_replace_editor' completed its mission! Result: Observed output of cmd `str_replace_editor` executed:
+Error: The `view_range` parameter is not allowed when `path` points to a directory.
+2025-05-21 14:05:54.592 | INFO     | app.agent.base:run:140 - Executing step 4/20
+2025-05-21 14:05:58.036 | INFO     | app.llm:update_token_count:243 - Token usage: Input=3396, Completion=125, Cumulative Input=11674, Cumulative Completion=552, Total=3521, Cumulative Total=12226
+2025-05-21 14:05:58.036 | INFO     | app.agent.toolcall:think:81 - ✨ Manus's thoughts: I'll help you understand and run the OpenManus project. Let me first explore the project structure to get a better understanding of how it's organized.
+2025-05-21 14:05:58.036 | INFO     | app.agent.toolcall:think:82 - 🛠️ Manus selected 1 tools to use
+2025-05-21 14:05:58.038 | INFO     | app.agent.toolcall:think:86 - 🧰 Tools being prepared: ['str_replace_editor']
+2025-05-21 14:05:58.038 | INFO     | app.agent.toolcall:think:89 - 🔧 Tool arguments: {"command": "view", "path": "C:/Users/MichaelCouso/OneDrive/NJT/OpenManus"}
+2025-05-21 14:05:58.039 | INFO     | app.agent.toolcall:execute_tool:180 - 🔧 Activating tool: 'str_replace_editor'...
+2025-05-21 14:05:58.063 | INFO     | app.agent.toolcall:act:150 - 🎯 Tool 'str_replace_editor' completed its mission! Result: Observed output of cmd `str_replace_editor` executed:
+Error: FIND: Parameter format not correct
+
+2025-05-21 14:05:58.064 | INFO     | app.agent.base:run:140 - Executing step 5/20

@@ -1,0 +1,67 @@
+2025-05-21 14:00:21.728 | WARNING  | __main__:main:16 - Processing your request...
+2025-05-21 14:00:21.729 | INFO     | app.agent.base:run:140 - Executing step 1/20
+2025-05-21 14:00:24.509 | INFO     | app.llm:update_token_count:243 - Token usage: Input=2248, Completion=79, Cumulative Input=2248, Cumulative Completion=79, Total=2327, Cumulative Total=2327
+2025-05-21 14:00:24.509 | INFO     | app.agent.toolcall:think:81 - ✨ Manus's thoughts: Hello! I'm OpenManus, an AI assistant ready to help you with various tasks. I can assist with:
+
+- Programming and code execution
+- Web browsing and research
+- File management and editing
+- Complex problem-solving
+
+What would you like help with today? Feel free to ask me anything, and I'll use the appropriate tools to assist you.
+2025-05-21 14:00:24.519 | INFO     | app.agent.toolcall:think:82 - 🛠️ Manus selected 0 tools to use
+2025-05-21 14:00:24.520 | INFO     | app.agent.base:run:140 - Executing step 2/20
+2025-05-21 14:00:27.824 | INFO     | app.llm:update_token_count:243 - Token usage: Input=2409, Completion=142, Cumulative Input=4657, Cumulative Completion=221, Total=2551, Cumulative Total=4878
+2025-05-21 14:00:27.824 | INFO     | app.agent.toolcall:think:81 - ✨ Manus's thoughts: I notice you've shared what appears to be part of my instructions. I'm OpenManus, your AI assistant, and I'm ready to help you with various tasks using the tools at my disposal.
+
+To get started, I can:
+- Execute Python code
+- Browse the web for information
+- Create or edit files
+- And more
+
+Is there a specific task or question you'd like help with today? For example:
+- Writing or debugging code
+- Researching a topic online
+- Creating or modifying files
+- Solving a complex problem
+
+Please let me know what you need assistance with, and I'll select the appropriate tools to help you.
+2025-05-21 14:00:27.832 | INFO     | app.agent.toolcall:think:82 - 🛠️ Manus selected 0 tools to use
+2025-05-21 14:00:27.833 | INFO     | app.agent.base:run:140 - Executing step 3/20
+2025-05-21 14:00:31.019 | INFO     | app.llm:update_token_count:243 - Token usage: Input=2633, Completion=145, Cumulative Input=7290, Cumulative Completion=366, Total=2778, Cumulative Total=7656
+2025-05-21 14:00:31.025 | INFO     | app.agent.toolcall:think:81 - ✨ Manus's thoughts: I notice you've sent the same message again, which appears to be part of my operational instructions rather than a task request.
+
+Let me help you get started with something useful. Let me show you what files are available in the current workspace:
+2025-05-21 14:00:31.025 | INFO     | app.agent.toolcall:think:82 - 🛠️ Manus selected 1 tools to use
+2025-05-21 14:00:31.026 | INFO     | app.agent.toolcall:think:86 - 🧰 Tools being prepared: ['str_replace_editor']
+2025-05-21 14:00:31.026 | INFO     | app.agent.toolcall:think:89 - 🔧 Tool arguments: {"command": "view", "path": "C:\\Users\\MichaelCouso\\OneDrive\\NJT\\OpenManus\\workspace"}
+2025-05-21 14:00:31.027 | INFO     | app.agent.toolcall:execute_tool:180 - 🔧 Activating tool: 'str_replace_editor'...
+2025-05-21 14:00:31.084 | INFO     | app.agent.toolcall:act:150 - 🎯 Tool 'str_replace_editor' completed its mission! Result: Observed output of cmd `str_replace_editor` executed:
+Error: FIND: Parameter format not correct
+
+2025-05-21 14:00:31.085 | INFO     | app.agent.base:run:140 - Executing step 4/20
+2025-05-21 14:00:34.048 | INFO     | app.llm:update_token_count:243 - Token usage: Input=2899, Completion=132, Cumulative Input=10189, Cumulative Completion=498, Total=3031, Cumulative Total=10687
+2025-05-21 14:00:34.058 | INFO     | app.agent.toolcall:think:81 - ✨ Manus's thoughts: I understand there may be some confusion in our conversation. Let me try a different approach to help you.
+
+Let me check what's in the current directory using Python:
+2025-05-21 14:00:34.059 | INFO     | app.agent.toolcall:think:82 - 🛠️ Manus selected 1 tools to use
+2025-05-21 14:00:34.059 | INFO     | app.agent.toolcall:think:86 - 🧰 Tools being prepared: ['python_execute']
+2025-05-21 14:00:34.059 | INFO     | app.agent.toolcall:think:89 - 🔧 Tool arguments: {"code": "import os\nprint(\"Current directory:\", os.getcwd())\nprint(\"\\nFiles and directories in current path:\")\nfor item in os.listdir():\n    print(f\"- {item}\")"}
+2025-05-21 14:00:34.060 | INFO     | app.agent.toolcall:execute_tool:180 - 🔧 Activating tool: 'python_execute'...
+2025-05-21 14:00:39.200 | INFO     | app.agent.toolcall:act:150 - 🎯 Tool 'python_execute' completed its mission! Result: Observed output of cmd `python_execute` executed:
+{'observation': 'Current directory: C:\\Users\\MichaelCouso\\OneDrive\\NJT\\OpenManus\n\nFiles and directories in current path:\n- .git\n- .gitattributes\n- .github\n- .gitignore\n- .pre-commit-config.yaml\n- .vscode\n- app\n- assets\n- CODE_OF_CONDUCT.md\n- config\n- Dockerfile\n- examples\n- LICENSE\n- logs\n- main.py\n- README.md\n- README_ja.md\n- README_ko.md\n- README_zh.md\n- requirements.txt\n- run_flow.py\n- run_mcp.py\n- run_mcp_server.py\n- setup.py\n- tests\n- workspace\n', 'success': True}
+2025-05-21 14:00:39.200 | INFO     | app.agent.base:run:140 - Executing step 5/20
+2025-05-21 14:00:42.348 | INFO     | app.llm:update_token_count:243 - Token usage: Input=3352, Completion=117, Cumulative Input=13541, Cumulative Completion=615, Total=3469, Cumulative Total=14156
+2025-05-21 14:00:42.348 | INFO     | app.agent.toolcall:think:81 - ✨ Manus's thoughts: I notice you're repeatedly sending the same message, which appears to be part of my operational instructions rather than a task request. 
+
+Since you haven't specified a particular task, I'll terminate this conversation. If you'd like to start a new conversation with a specific request or question, please feel free to do so.
+2025-05-21 14:00:42.348 | INFO     | app.agent.toolcall:think:82 - 🛠️ Manus selected 1 tools to use
+2025-05-21 14:00:42.354 | INFO     | app.agent.toolcall:think:86 - 🧰 Tools being prepared: ['terminate']
+2025-05-21 14:00:42.354 | INFO     | app.agent.toolcall:think:89 - 🔧 Tool arguments: {"status": "success"}
+2025-05-21 14:00:42.355 | INFO     | app.agent.toolcall:execute_tool:180 - 🔧 Activating tool: 'terminate'...
+2025-05-21 14:00:42.355 | INFO     | app.agent.toolcall:_handle_special_tool:217 - 🏁 Special tool 'terminate' has completed the task!
+2025-05-21 14:00:42.355 | INFO     | app.agent.toolcall:act:150 - 🎯 Tool 'terminate' completed its mission! Result: Observed output of cmd `terminate` executed:
+The interaction has been completed with status: success
+2025-05-21 14:00:42.356 | INFO     | app.tool.mcp:disconnect:175 - Disconnected from all MCP servers
+2025-05-21 14:00:42.357 | INFO     | __main__:main:18 - Request processing completed.

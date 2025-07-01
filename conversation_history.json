@@ -1,0 +1,14 @@
+[
+  {
+    "sender": "User",
+    "message": "Hello manus",
+    "timestamp": "2025-05-21T15:32:11.714161",
+    "is_user": true
+  },
+  {
+    "sender": "Assistant",
+    "message": "I received your message: 'Hello manus'. Our conversation has 1 previous messages. This is a mock response for testing memory.",
+    "timestamp": "2025-05-21T15:32:12.720421",
+    "is_user": false
+  }
+]

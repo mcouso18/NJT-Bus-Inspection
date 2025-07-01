@@ -1,0 +1,34 @@
+=== Text File Analysis Report ===
+
+File: example.txt
+  Word count: 17
+  Unique words: 16
+  Average word length: 4.59 characters
+  Most common words:
+    - 'by': 2 occurrences
+    - 'this': 1 occurrences
+    - 'is': 1 occurrences
+    - 'a': 1 occurrences
+    - 'sample': 1 occurrences
+    - 'file': 1 occurrences
+    - 'files': 1 occurrences
+    - 'generated': 1 occurrences
+    - 'openmanus': 1 occurrences
+    - 'are': 1 occurrences
+
+File: README.md
+  Word count: 284
+  Unique words: 108
+  Average word length: 5.67 characters
+  Most common words:
+    - 'prompt': 17 occurrences
+    - 'the': 15 occurrences
+    - 'python': 11 occurrences
+    - 'window': 9 occurrences
+    - 'to': 9 occurrences
+    - 'py': 8 occurrences
+    - 'a': 6 occurrences
+    - 'in': 6 occurrences
+    - 'interactive': 5 occurrences
+    - 'for': 5 occurrences
+

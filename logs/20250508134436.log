@@ -1,0 +1,15 @@
+2025-05-08 13:44:56.105 | WARNING  | __main__:main:16 - Processing your request...
+2025-05-08 13:44:56.106 | INFO     | app.agent.base:run:140 - Executing step 1/20
+2025-05-08 13:44:56.274 | ERROR    | app.llm:ask_tool:756 - OpenAI API error: Error code: 401 - {'error': {'code': 'authentication_error', 'message': 'Invalid Anthropic API Key', 'type': 'invalid_request_error', 'param': None}}
+2025-05-08 13:44:56.275 | ERROR    | app.llm:ask_tool:758 - Authentication failed. Check API key.
+2025-05-08 13:44:57.332 | ERROR    | app.llm:ask_tool:756 - OpenAI API error: Error code: 401 - {'error': {'code': 'authentication_error', 'message': 'Invalid Anthropic API Key', 'type': 'invalid_request_error', 'param': None}}
+2025-05-08 13:44:57.342 | ERROR    | app.llm:ask_tool:758 - Authentication failed. Check API key.
+2025-05-08 13:44:59.128 | ERROR    | app.llm:ask_tool:756 - OpenAI API error: Error code: 401 - {'error': {'code': 'authentication_error', 'message': 'Invalid Anthropic API Key', 'type': 'invalid_request_error', 'param': None}}
+2025-05-08 13:44:59.128 | ERROR    | app.llm:ask_tool:758 - Authentication failed. Check API key.
+2025-05-08 13:45:01.870 | ERROR    | app.llm:ask_tool:756 - OpenAI API error: Error code: 401 - {'error': {'code': 'authentication_error', 'message': 'Invalid Anthropic API Key', 'type': 'invalid_request_error', 'param': None}}
+2025-05-08 13:45:01.870 | ERROR    | app.llm:ask_tool:758 - Authentication failed. Check API key.
+2025-05-08 13:45:07.905 | ERROR    | app.llm:ask_tool:756 - OpenAI API error: Error code: 401 - {'error': {'code': 'authentication_error', 'message': 'Invalid Anthropic API Key', 'type': 'invalid_request_error', 'param': None}}
+2025-05-08 13:45:07.905 | ERROR    | app.llm:ask_tool:758 - Authentication failed. Check API key.
+2025-05-08 13:45:12.210 | ERROR    | app.llm:ask_tool:756 - OpenAI API error: Error code: 401 - {'error': {'code': 'authentication_error', 'message': 'Invalid Anthropic API Key', 'type': 'invalid_request_error', 'param': None}}
+2025-05-08 13:45:12.210 | ERROR    | app.llm:ask_tool:758 - Authentication failed. Check API key.
+2025-05-08 13:45:12.217 | INFO     | app.tool.mcp:disconnect:175 - Disconnected from all MCP servers

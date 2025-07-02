@@ -14,4 +14,6 @@ Current API integration is with free keys. Pending access and funding to API key
 
 Currently, the tool is only programed to work with NABI/NF 40ft and 60ft articulated buses, and 45ft MCI cruiser buses. When NJTRANSIT gets new bus models (such as BEB buses), the tool will be updated to reflect as such.
 
+All necessary documentation can be found on the master sheet excel file.
+
 Ideas? Email Us!

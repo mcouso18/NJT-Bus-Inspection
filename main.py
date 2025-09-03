@@ -3,31 +3,28 @@ import base64
 import os
 from pathlib import Path
 
+import openpyxl
+
 from app.agent.manus import Manus
 from app.logger import logger
-from interactive_prompt import InteractivePrompt
+from excel_utils import analyze_and_populate_excel
+
+# from interactive_prompt import InteractivePrompt # This import is unused, can be removed
 
 
 async def analyze_image_with_prompt(agent, image_path: str, text_prompt: str = None):
-    """
-    Analyze an image using the Manus agent with Claude's vision capabilities
 
-    Args:
-        agent: The Manus agent instance
-        image_path: Path to the image file
-        text_prompt: Optional text prompt to accompany the image
-    """
     try:
         # Check if file exists
         if not os.path.exists(image_path):
             logger.error(f"Image file not found: {image_path}")
-            return
+            return {}
 
         # Get file size for validation
         file_size = os.path.getsize(image_path)
         if file_size > 5 * 1024 * 1024:  # 5MB limit
             logger.error(f"Image file too large: {file_size / (1024*1024):.1f}MB (max 5MB)")
-            return
+            return {}
 
         # Read and encode image
         with open(image_path, "rb") as image_file:
@@ -47,7 +44,7 @@ async def analyze_image_with_prompt(agent, image_path: str, text_prompt: str = N
         media_type = media_type_map.get(file_extension)
         if not media_type:
             logger.error(f"Unsupported image format: {file_extension}")
-            return
+            return {}
 
         # Create the combined prompt with image and text
         if text_prompt:
@@ -68,11 +65,13 @@ async def analyze_image_with_prompt(agent, image_path: str, text_prompt: str = N
             }
         }
 
-        # Run the agent with the vision prompt
-        await agent.run_vision_analysis(vision_prompt)
+        # Run the agent with the vision prompt and capture the result
+        analysis_output = await agent.run_vision_analysis(vision_prompt)
+        return analysis_output # Return the captured output
 
     except Exception as e:
         logger.error(f"Error analyzing image: {str(e)}")
+        return {}
 
 
 def detect_image_in_prompt(prompt: str):
@@ -98,7 +97,7 @@ def detect_image_in_prompt(prompt: str):
 
 async def main():
     # Create and initialize Manus agent
-    agent = await Manus.create()
+    agent = Manus()
     try:
         prompt = input("Enter your prompt (or image path + description): ").strip()
         if not prompt:
@@ -112,7 +111,21 @@ async def main():
 
         if is_image_prompt:
             logger.info(f"Image detected: {image_path}")
-            await analyze_image_with_prompt(agent, image_path, text_part)
+            # Capture the returned analysis results
+            analysis_results = await analyze_image_with_prompt(agent, image_path, text_part)
+
+            # Check if analysis was successful and then populate Excel
+            if analysis_results:
+                logger.info("Image analysis completed. Populating Excel...")
+                # Ensure this path is correct for your Excel template
+                template_excel_path = "/home/ubuntu/upload/TemplateforAIOutput.xlsx"
+                # Define where to save the output Excel file
+                output_excel_path = "/home/ubuntu/analysis/Bus_Analysis_Output_Automated.xlsx"
+
+                analyze_and_populate_excel(template_excel_path, output_excel_path, analysis_results)
+                logger.info(f"Excel file populated and saved to {output_excel_path}")
+            else:
+                logger.error("Image analysis failed, cannot populate Excel.")
         else:
             # Regular text prompt
             await agent.run(prompt)
@@ -133,7 +146,7 @@ async def interactive_main():
     """
     Interactive version that explicitly asks for image or text input
     """
-    agent = await Manus.create()
+    agent = Manus()
     try:
         print("\nManus Agent - Vision & Text Analysis")
         print("1. Text prompt")
@@ -147,16 +160,24 @@ async def interactive_main():
             if prompt:
                 await agent.run(prompt)
 
-        elif choice == "2":
+        elif choice == "2" or choice == "3":
             image_path = input("Enter image path: ").strip()
-            if image_path:
-                await analyze_image_with_prompt(agent, image_path)
+            text_prompt = input("Enter your prompt about the image: ").strip() if choice == "3" else None
 
-        elif choice == "3":
-            image_path = input("Enter image path: ").strip()
-            text_prompt = input("Enter your prompt about the image: ").strip()
             if image_path:
-                await analyze_image_with_prompt(agent, image_path, text_prompt)
+                # Capture the returned analysis results
+                analysis_results = await analyze_image_with_prompt(agent, image_path, text_prompt)
+
+                # Check if analysis was successful and then populate Excel
+                if analysis_results:
+                    logger.info("Image analysis completed. Populating Excel...")
+                    template_excel_path = "/home/ubuntu/upload/TemplateforAIOutput.xlsx"
+                    output_excel_path = "/home/ubuntu/analysis/Bus_Analysis_Output_Interactive.xlsx"
+
+                    analyze_and_populate_excel(template_excel_path, output_excel_path, analysis_results)
+                    logger.info(f"Excel file populated and saved to {output_excel_path}")
+                else:
+                    logger.error("Image analysis failed, cannot populate Excel.")
 
         else:
             logger.warning("Invalid choice.")
@@ -177,5 +198,3 @@ if __name__ == "__main__":
         asyncio.run(interactive_main())
     else:
         asyncio.run(main())
-
-

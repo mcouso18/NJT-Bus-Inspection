@@ -1,7 +1,5 @@
 from typing import Dict, List, Optional
 
-from pydantic import Field, model_validator
-
 from app.agent.browser import BrowserContextHelper
 from app.agent.toolcall import ToolCallAgent
 from app.config import config
@@ -13,6 +11,7 @@ from app.tool.browser_use_tool import BrowserUseTool
 from app.tool.mcp import MCPClients, MCPClientTool
 from app.tool.python_execute import PythonExecute
 from app.tool.str_replace_editor import StrReplaceEditor
+from pydantic import Field, model_validator
 
 
 class Manus(ToolCallAgent):
@@ -164,17 +163,25 @@ class Manus(ToolCallAgent):
 
         return result
 
-    async def run_vision_analysis(self, vision_prompt: Dict):
-        """Placeholder for vision analysis."""
+    async def run_vision_analysis(self, vision_prompt: Dict) -> Dict[str, str]:
+        """Performs vision analysis and returns structured results for Excel population."""
         logger.info(f"Received vision prompt: {vision_prompt}")
-        # This method will be implemented to call the vision API
+
+        # Handle text-only prompts that might be mistakenly routed here
+        if vision_prompt.get("type") == "text_prompt":
+            text_content = vision_prompt.get("text", "")
+            logger.info(f"Processing text-only prompt in run_vision_analysis: {text_content}")
+            # You might want to call a different LLM for text analysis here
+            # For now, return a placeholder or empty dict
+            return {"Overall Analysis:": f"Text prompt received: {text_content}"}
+
         from anthropic import Anthropic
 
         try:
             vision_config = config.llm.get("vision")
             if not vision_config or not vision_config.api_key or not vision_config.model:
                 logger.error("Vision API configuration missing in config.toml")
-                return
+                return {}
 
             client = Anthropic(api_key=vision_config.api_key)
 
@@ -202,8 +209,48 @@ class Manus(ToolCallAgent):
                     }
                 ],
             )
-            logger.info(f"Vision analysis response: {message.content[0].text}")
-            self.memory.add_message({"role": "assistant", "content": message.content[0].text})
+            claude_response_text = message.content[0].text
+            logger.info(f"Vision analysis response: {claude_response_text}")
+            self.memory.add_message({"role": "assistant", "content": claude_response_text})
+
+            # FIX: Parse Claude's response into a structured dictionary for Excel
+            # This is a placeholder. You NEED to implement _parse_claude_vision_response
+            # to extract specific checklist items from claude_response_text.
+            parsed_analysis_results = self._parse_claude_vision_response(claude_response_text)
+            return parsed_analysis_results
 
         except Exception as e:
             logger.error(f"Error during vision analysis: {str(e)}")
+            return {}
+
+    def _parse_claude_vision_response(self, response_text: str) -> Dict[str, str]:
+        """
+        Parses the raw text response from Claude Vision into a dictionary
+        mapping Excel checklist items to their analysis results.
+        This method needs to be implemented based on how you prompt Claude
+        and how it structures its responses.
+        """
+        # This is a crucial placeholder. You need to implement the logic here.
+        # Example: If Claude returns JSON, parse it. If it returns natural language,
+        # use regex or another LLM call to extract structured data.
+        # For demonstration, we'll return a simple mapping based on keywords.
+
+        # IMPORTANT: The keys in this dictionary MUST EXACTLY match the
+        # "Checklist Item" names in your Excel template.
+
+        analysis = {}
+        if "windshield" in response_text.lower():
+            analysis["Windshield"] = "Windshield appears clear."
+        if "wipers" in response_text.lower():
+            analysis["Windshield Wipers"] = "Wipers are present."
+        if "license plate" in response_text.lower():
+            analysis["License Plates"] = "License plate detected."
+        if "overall" in response_text.lower() or "general condition" in response_text.lower():
+            analysis["Overall Analysis:"] = response_text # Use the full response for overall
+
+        # Add more parsing logic here for other checklist items
+        # For now, if no specific item is found, put the whole response in Overall Analysis
+        if not analysis and response_text:
+            analysis["Overall Analysis:"] = response_text
+
+        return analysis
